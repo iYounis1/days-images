@@ -1,26 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Day Image Redirect</title>
+<html>
+<body style="margin:0;background:transparent;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+
+<img id="img" style="
+max-width:100%;
+height:auto;
+display:block;
+">
 
 <script>
 
-// ترتيبك يبدأ من السبت = 0
-// بينما JavaScript يبدأ من الأحد = 0
-// هذه المعادلة تصحح الترتيب
+const images = [
+
+"https://raw.githubusercontent.com/iYounis1/days-images/main/0.png", // السبت
+
+"https://raw.githubusercontent.com/iYounis1/days-images/main/1.png", // الأحد
+
+"https://raw.githubusercontent.com/iYounis1/days-images/main/2.png", // الاثنين
+
+"https://raw.githubusercontent.com/iYounis1/days-images/main/3.png", // الثلاثاء
+
+"https://raw.githubusercontent.com/iYounis1/days-images/main/4.png", // الأربعاء
+
+"https://raw.githubusercontent.com/iYounis1/days-images/main/5.png", // الخميس
+
+"https://raw.githubusercontent.com/iYounis1/days-images/main/6.png"  // الجمعة
+
+];
+
+// تصحيح ترتيب الأيام لأن JavaScript يبدأ من الأحد
 
 const correctedDay = (new Date().getDay() + 1) % 7;
 
-// تحويل مباشر إلى ملف الصورة
-
-window.location.href = correctedDay + ".png";
+document.getElementById("img").src = images[correctedDay];
 
 </script>
 
-</head>
-
-<body style="margin:0;background:transparent;">
 </body>
-
 </html>
