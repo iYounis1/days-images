@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0;background:transparent;">
+
+<img id="img" style="
+width:700px;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+">
+
+<script>
+const images = [
+"https://raw.githubusercontent.com/iYounis1/days-images/main/0.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/1.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/2.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/3.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/4.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/5.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/6.png"
+];
+
+document.getElementById("img").src =
+images[new Date().getDay()];
+</script>
+
+</body>
+</html>
