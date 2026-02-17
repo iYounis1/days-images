@@ -2,31 +2,20 @@
 <html>
 <body style="margin:0;background:transparent;">
 
-<img id="img" style="
-width:700px;
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-">
+<img id="img">
 
 <script>
-// صورك تبدأ من السبت = 0
 const images = [
-"https://raw.githubusercontent.com/iYounis1/days-images/main/0.png", // السبت
-"https://raw.githubusercontent.com/iYounis1/days-images/main/1.png", // الأحد
-"https://raw.githubusercontent.com/iYounis1/days-images/main/2.png", // الاثنين
-"https://raw.githubusercontent.com/iYounis1/days-images/main/3.png", // الثلاثاء
-"https://raw.githubusercontent.com/iYounis1/days-images/main/4.png", // الأربعاء
-"https://raw.githubusercontent.com/iYounis1/days-images/main/5.png", // الخميس
-"https://raw.githubusercontent.com/iYounis1/days-images/main/6.png"  // الجمعة
+"https://raw.githubusercontent.com/iYounis1/days-images/main/0.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/1.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/2.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/3.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/4.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/5.png",
+"https://raw.githubusercontent.com/iYounis1/days-images/main/6.png"
 ];
 
-// تحويل ترتيب JavaScript إلى ترتيبك
-const jsDay = new Date().getDay();
-
-// المعادلة الصحيحة
-const correctedDay = (jsDay + 1) % 7;
+const correctedDay = (new Date().getDay() + 1) % 7;
 
 document.getElementById("img").src = images[correctedDay];
 </script>
