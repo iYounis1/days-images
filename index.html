@@ -11,22 +11,22 @@ transform:translate(-50%,-50%);
 ">
 
 <script>
-const images = [
-"https://raw.githubusercontent.com/iYounis1/days-images/main/0.png",
-"https://raw.githubusercontent.com/iYounis1/days-images/main/1.png",
-"https://raw.githubusercontent.com/iYounis1/days-images/main/2.png",
-"https://raw.githubusercontent.com/iYounis1/days-images/main/3.png",
-"https://raw.githubusercontent.com/iYounis1/days-images/main/4.png",
-"https://raw.githubusercontent.com/iYounis1/days-images/main/5.png",
-"https://raw.githubusercontent.com/iYounis1/days-images/main/6.png"
-];
+const images = {
+"Sun": "https://raw.githubusercontent.com/iYounis1/days-images/main/0.png",
+"Mon": "https://raw.githubusercontent.com/iYounis1/days-images/main/1.png",
+"Tue": "https://raw.githubusercontent.com/iYounis1/days-images/main/2.png",
+"Wed": "https://raw.githubusercontent.com/iYounis1/days-images/main/3.png",
+"Thu": "https://raw.githubusercontent.com/iYounis1/days-images/main/4.png",
+"Fri": "https://raw.githubusercontent.com/iYounis1/days-images/main/5.png",
+"Sat": "https://raw.githubusercontent.com/iYounis1/days-images/main/6.png"
+};
 
-// توقيت السعودية
-const today = new Date(
-new Date().toLocaleString("en-US", { timeZone: "Asia/Riyadh" })
-).getDay();
+const dayName = new Intl.DateTimeFormat("en-US", {
+timeZone: "Asia/Riyadh",
+weekday: "short"
+}).format(new Date());
 
-document.getElementById("img").src = images[today];
+document.getElementById("img").src = images[dayName];
 </script>
 
 </body>
