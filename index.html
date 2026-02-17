@@ -21,8 +21,12 @@ const images = [
 "https://raw.githubusercontent.com/iYounis1/days-images/main/6.png"
 ];
 
-document.getElementById("img").src =
-images[new Date().getDay()];
+// توقيت السعودية
+const today = new Date(
+new Date().toLocaleString("en-US", { timeZone: "Asia/Riyadh" })
+).getDay();
+
+document.getElementById("img").src = images[today];
 </script>
 
 </body>
