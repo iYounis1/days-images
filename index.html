@@ -12,16 +12,15 @@ transform:translate(-50%,-50%);
 
 <script>
 const images = [
-"https://raw.githubusercontent.com/iYounis1/days-images/main/0.png", // الأحد
-"https://raw.githubusercontent.com/iYounis1/days-images/main/1.png", // الاثنين
-"https://raw.githubusercontent.com/iYounis1/days-images/main/2.png", // الثلاثاء
-"https://raw.githubusercontent.com/iYounis1/days-images/main/3.png", // الأربعاء
-"https://raw.githubusercontent.com/iYounis1/days-images/main/4.png", // الخميس
-"https://raw.githubusercontent.com/iYounis1/days-images/main/5.png", // الجمعة
-"https://raw.githubusercontent.com/iYounis1/days-images/main/6.png"  // السبت
+"https://raw.githubusercontent.com/iYounis1/days-images/main/1.png", // الأحد
+"https://raw.githubusercontent.com/iYounis1/days-images/main/2.png", // الاثنين
+"https://raw.githubusercontent.com/iYounis1/days-images/main/3.png", // الثلاثاء
+"https://raw.githubusercontent.com/iYounis1/days-images/main/4.png", // الأربعاء
+"https://raw.githubusercontent.com/iYounis1/days-images/main/5.png", // الخميس
+"https://raw.githubusercontent.com/iYounis1/days-images/main/6.png", // الجمعة
+"https://raw.githubusercontent.com/iYounis1/days-images/main/0.png"  // السبت
 ];
 
-// هذا يستخدم توقيت جهازك مباشرة
 const today = new Date().getDay();
 
 document.getElementById("img").src = images[today];
